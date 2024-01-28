@@ -78,14 +78,18 @@ function highlight(element, type) {
   let header = document.createElement("div");
   header.classList.add("modal-header");
   let headerText = document.createElement("h1");
-  headerText.innerHTML = type + " Pattern";
+  headerText.style.border = "1px solid #000"; 
+  headerText.style.borderRadius="10px";
+  headerText.style.backgroundColor="#A28CEC";
+  headerText.style.width="150px";
+  headerText.innerHTML =type+ " Pattern"; 
   header.appendChild(headerText);
   body.appendChild(header);
 
   /* content */
   let content = document.createElement("div");
-  content.classList.add("modal-content");
-  content.innerHTML = descriptions[type];
+  content.classList.add("modal-content"); 
+  // content.innerHTML = descriptions[type];
   body.appendChild(content);
 
   element.appendChild(body);

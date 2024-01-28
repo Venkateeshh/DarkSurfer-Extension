@@ -21,3 +21,14 @@ window.onload = function () {
       document.getElementsByClassName("number")[0].textContent = request.count;
     }
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.flag-button').addEventListener('click', function() {
+      try {
+        chrome.tabs.create({ url: "https://darksurfer.streamlit.app/" });
+      } catch (error) {
+        console.error("Error creating tab:", error);
+        // Handle error gracefully, e.g., display an error message to the user
+      }
+    });
+  });
