@@ -43,11 +43,9 @@ We welcome contributions! If you want to contribute to the project, please follo
 2. Create a new branch for your feature or bug fix.
 3. Make your changes and submit a pull request.
 
-## License
 
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-**Note:** This documentation provides a general structure. You may want to add more details, such as system requirements, troubleshooting tips, or specific instructions for developers.
+
 
