@@ -81,7 +81,7 @@ function highlight(element, type) {
   headerText.style.border = "1px solid #FF0000"; 
   headerText.style.borderRadius="10px";
   headerText.style.backgroundColor="#A28CEC";
-  headerText.style.width="150px";
+  headerText.style.width="fit-content";
   headerText.innerHTML =type+ " Pattern"; 
   header.appendChild(headerText);
   body.appendChild(header);
