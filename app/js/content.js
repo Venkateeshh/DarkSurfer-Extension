@@ -10,12 +10,10 @@ const descriptions = {
 };
 
 function scrape() {
-  // website has already been analyzed
   if (document.getElementById("insite_count")) {
     return;
   }
 
-  // aggregate all DOM elements on the page
   let elements = segments(document.body);
   let filtered_elements = [];
 
@@ -27,7 +25,6 @@ function scrape() {
     filtered_elements.push(text);
   }
 
-  // post to the web server
   fetch(endpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -86,7 +83,6 @@ function highlight(element, type) {
   header.appendChild(headerText);
   body.appendChild(header);
 
-  /* content */
   let content = document.createElement("div");
   content.classList.add("modal-content"); 
   // content.innerHTML = descriptions[type];
