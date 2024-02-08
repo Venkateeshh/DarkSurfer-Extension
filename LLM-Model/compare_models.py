@@ -10,12 +10,24 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn import svm, tree
 from sklearn.linear_model import SGDClassifier, LogisticRegression
 
+df1 = pd.read_csv("normie.csv")
+df2 = pd.read_csv("dark_patterns.csv")
 
 
-df = pd.read_csv("dataset.csv")
+df1 = df1[pd.notnull(df1["Pattern String"])]
+df1 = df1[df1["classification"] == 0]
+df1["classification"] = "Not Dark"
+df1.drop_duplicates(subset="Pattern String")
+
+df2 = df2[pd.notnull(df2["Pattern String"])]
+df2["classification"] = "Dark"
+col = ["Pattern String", "classification"]
+df2 = df2[col]
+
+df = pd.concat([df1, df2])
 
 X_train, X_test, y_train, y_test = train_test_split(
-    df['text'], df["label"], random_state=42, test_size=.3)
+    df['Pattern String'], df["classification"], random_state=42, test_size=.3)
 count_vect = CountVectorizer()
 X_train_counts = count_vect.fit_transform(X_train)
 tfidf_transformer = TfidfTransformer()

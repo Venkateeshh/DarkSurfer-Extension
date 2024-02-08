@@ -85,7 +85,12 @@ function highlight(element, type) {
 
   let content = document.createElement("div");
   content.classList.add("modal-content"); 
-  // content.innerHTML = descriptions[type];
+  content.style.border = "1px solid #FF0000"; 
+  content.style.borderRadius="10px";
+  content.style.backgroundColor="#A28CEC";
+  content.style.width="fit-content";
+  content.innerHTML =type+ " Pattern";
+  content.innerHTML = descriptions[type];
   body.appendChild(content);
 
   element.appendChild(body);

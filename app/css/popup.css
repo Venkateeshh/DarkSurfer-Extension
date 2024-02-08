@@ -5,7 +5,7 @@ html, body {
     min-height: 180;
     width: 296px;
     color: #FFFFFF;
-    background-color: #041F30;
+    background-color: #91c4e4;
 }
 
 h1 {
@@ -81,5 +81,5 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .modal-footer a {
-    color: #D8D8D8;
+    color: #242020;
 }
